@@ -6,6 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace FirstXamarinApp.Droid
 {
@@ -14,6 +17,8 @@ namespace FirstXamarinApp.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            AppCenter.Start("cca90fc0-ced8-48e8-bfe6-bfcab42fdc58", typeof(Analytics), typeof(Crashes));
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
